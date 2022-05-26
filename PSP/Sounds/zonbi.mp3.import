@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zonbi.mp3-cd528886e84ff309d612fe9300ce619e.mp3str"
+
+[deps]
+
+source_file="res://Sounds/zonbi.mp3"
+dest_files=[ "res://.import/zonbi.mp3-cd528886e84ff309d612fe9300ce619e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

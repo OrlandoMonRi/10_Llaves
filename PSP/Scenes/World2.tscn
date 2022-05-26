@@ -1,0 +1,250 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Zombie.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sounds/GunShotSnglFireIn PE1097304.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Sprites/2.png" type="Texture" id=4]
+[ext_resource path="res://Characters/wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/World2.gd" type="Script" id=6]
+[ext_resource path="res://Sounds/llabe2.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Scripts/CanvasLayer2.gd" type="Script" id=8]
+[ext_resource path="res://Characters/Llave2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sprites/llave.png" type="Texture" id=10]
+[ext_resource path="res://Sounds/nivel 2.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/zonbi.mp3" type="AudioStream" id=12]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1028.0
+margin_bottom = 606.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 61, 64 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource( 3 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Extras/Camera2D")
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1307, 123 )
+scale = Vector2( 14.36, 1 )
+
+[node name="Wall2" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1307, -6.99999 )
+scale = Vector2( 14.36, 1 )
+
+[node name="Wall3" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 431, 32 )
+scale = Vector2( -1.35276, 3.02542 )
+
+[node name="Wall4" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1497, 22 )
+scale = Vector2( 1.66285, 1.42866 )
+
+[node name="Wall5" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1501, 96 )
+scale = Vector2( 1.66285, 1.42866 )
+
+[node name="Wall6" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1029, 8 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall7" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 623, 112 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall8" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 197, 112 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall9" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 707, 6 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall10" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 879, 98 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall11" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1097, 12 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall12" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1183, 10 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall13" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1813, 26 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall14" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 2329, 10 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall15" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1901, 90 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall16" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 1996, 20 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall17" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 2121, 10 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall18" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 2233, 98 )
+rotation = -1.57834
+scale = Vector2( 0.474652, 0.835897 )
+
+[node name="Wall19" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 2565, 52 )
+rotation = -1.57834
+scale = Vector2( 0.754041, 0.835897 )
+
+[node name="Wall20" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( -1.00002, 55 )
+rotation = -1.57834
+scale = Vector2( 0.774234, 0.814201 )
+
+[node name="Extras" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Extras"]
+position = Vector2( 61, 64 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 51, 51 )
+texture = ExtResource( 10 )
+
+[node name="Contador" type="Label" parent="CanvasLayer"]
+margin_left = 88.0
+margin_top = 24.0
+margin_right = 128.0
+margin_bottom = 38.0
+rect_scale = Vector2( 4.81253, 3.99386 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Llaves" type="Node" parent="."]
+
+[node name="Llave2" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 204, 34 )
+
+[node name="Llave3" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 622, 37 )
+
+[node name="Llave4" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 808, 61 )
+
+[node name="Llave5" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 977, 74 )
+
+[node name="Llave6" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 1260, 56 )
+
+[node name="Llave7" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 1711, 59 )
+
+[node name="Llave8" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 2060, 59 )
+
+[node name="Llave9" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 2176, 51 )
+
+[node name="Llave10" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 2500, 55 )
+
+[node name="Llave11" parent="Llaves" instance=ExtResource( 9 )]
+position = Vector2( 1880, 27 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Zombie2" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 265, 82 )
+
+[node name="Zombie3" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 517, 87 )
+
+[node name="Zombie4" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 689, 85 )
+
+[node name="Zombie5" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 801, 57 )
+
+[node name="Zombie6" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 921, 29 )
+
+[node name="Zombie7" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 1081, 79 )
+
+[node name="Zombie8" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 1197, 81 )
+
+[node name="Zombie9" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 1323, 53 )
+
+[node name="Zombie10" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 1509, 59 )
+
+[node name="Zombie11" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 1647, 55 )
+
+[node name="Zombie12" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 1956, 90 )
+
+[node name="Zombie13" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 2103, 87 )
+
+[node name="Zombie14" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 2184, 35 )
+
+[node name="Zombie15" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 2289, 68 )
+
+[node name="Zombie16" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 2405, 56 )
+
+[node name="Zombie17" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 2524, 45 )
+
+[node name="Zombie" parent="Enemies" instance=ExtResource( 2 )]
+position = Vector2( 73, 389 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/llabe2.mp3-695ae5a4f0c9e2be1feda1507f2818cd.mp3str"
+
+[deps]
+
+source_file="res://Sounds/llabe2.mp3"
+dest_files=[ "res://.import/llabe2.mp3-695ae5a4f0c9e2be1feda1507f2818cd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
